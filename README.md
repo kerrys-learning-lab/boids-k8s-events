@@ -20,7 +20,9 @@ $ export PYTHONPATH=/opt/boids-k8s-events/src:/usr/local/lib/python3.11/site-pac
 **NOTE:** A valid kubectl config file must exist at ~python/.kube/config
 
 ```
-$ PYTHONPATH=src:${PYTHONPATH} pytest test
+$ export PYTHONPATH=/opt/boids-k8s-events/src:/usr/local/lib/python3.11/site-packages:${PYTHONPATH}
 
-$ PYTHONPATH=src:${PYTHONPATH} pylint src
+$ pytest test
+
+$ pylint src
 ```
