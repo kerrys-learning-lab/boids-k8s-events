@@ -1,0 +1,20 @@
+{
+	"name": "Ubuntu",
+	"dockerComposeFile": [
+		"../docker-compose.yml"
+	],
+	"workspaceFolder": "/opt/boids-k8s-events",
+	"remoteUser": "python",
+	"service": "boids-k8s-events",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"github.remotehub",
+				"github.vscode-pull-request-github",
+				"ms-azuretools.vscode-docker",
+				"ms-python.python",
+				"ms-python.pylint"
+			]
+		}
+	}
+}
