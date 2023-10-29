@@ -35,7 +35,7 @@ async def test_session_pending():
 
     found_deployment = False
     while not found_deployment:
-        deployments = boids.k8s_events.kubectl.get_resource('deployments')
+        deployments = boids.k8s_events.kubectl.get_resources_by_type('deployments')
 
         for dep in deployments:
             if dep['metadata'].get('name') == f'engine-{session.uuid}-deployment':
@@ -52,7 +52,7 @@ async def test_session_pending():
     consumer.on_message(message)
     while found_deployment:
         found_deployment = False
-        deployments = boids.k8s_events.kubectl.get_resource('deployments')
+        deployments = boids.k8s_events.kubectl.get_resources_by_type('deployments')
 
         for dep in deployments:
             if dep['metadata'].get('name') == f'engine-{session.uuid}-deployment':
