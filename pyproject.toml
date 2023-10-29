@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "boids-k8s-events"
-version = "1.1.0"
+version = "1.2.0"
 description = "Interacts with the k8s cluster based on Boids events"
 authors = ["Kerry Johnson <kerry.t.johnson@gmail.com>"]
 readme = "README.md"
@@ -8,7 +8,7 @@ readme = "README.md"
 [tool.commitizen]
 name = "cz_conventional_commits"
 tag_format = "v$version"
-version = "1.1.0"
+version = "1.2.0"
 version_files = [
     "pyproject.toml:^version"
 ]
