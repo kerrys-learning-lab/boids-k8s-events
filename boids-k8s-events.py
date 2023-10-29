@@ -8,6 +8,7 @@ import boids_utils.config
 import boids_utils.logging
 import boids_utils.openapi
 import boids_utils.pubsub
+import boids_utils.template
 
 LOGGER = logging.getLogger('boids-k8s-events')
 
@@ -20,7 +21,8 @@ CLI_STAKEHOLDERS = [
     boids_utils.config,
     boids_utils.logging,
     boids_utils.openapi,
-    boids_utils.pubsub
+    boids_utils.pubsub,
+    boids_utils.template
 ]
 
 if __name__ == '__main__':

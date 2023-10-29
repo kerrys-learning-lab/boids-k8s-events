@@ -11,9 +11,6 @@ LOGGER = logging.getLogger(__name__)
 class SessionConfigurationStatusConsumer(boids_utils.pubsub.ConsumerCallback):
     """ Responds to SessionConfigurationStatus messages """
 
-    def __init__(self) -> None:
-        super().__init__()
-
     def on_message(self, message: boids_utils.pubsub.Message):
         session_status = boidsapi.model.SessionConfigurationStatus.from_dict(message.value)
 
@@ -33,7 +30,7 @@ class SessionConfigurationStatusConsumer(boids_utils.pubsub.ConsumerCallback):
 
     @staticmethod
     def _create_k8s_template(session_status: boidsapi.model.SessionConfigurationStatus):
-        # TODO: Get Pod labels to pass in to template
+        # TODO: Get Pod labels to pass in to template # pylint: disable=fixme
         return boids_utils.template.render('boids-engine-k8s.yaml.j2',
                                            uuid=session_status.uuid,
                                            image_spec=os.environ.get('BOIDS_ENGINE_IMAGE_SPEC',
