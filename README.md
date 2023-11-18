@@ -6,7 +6,7 @@ Interacts with the k8s cluster based on Boids events
 
 ### Prerequisites:
 
-TBP
+To Be Provided
 
 ### Running inside the container
 
