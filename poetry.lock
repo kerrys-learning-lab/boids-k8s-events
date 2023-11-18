@@ -207,6 +207,17 @@ files = [
 ]
 
 [[package]]
+name = "boids-api"
+version = "1.0.3"
+description = "API specification for the Boids application"
+optional = false
+python-versions = "*"
+files = [
+    {file = "boids_api-1.0.3-py2.py3-none-any.whl", hash = "sha256:eb6f1ddba58452b01fb28e58b2a95e53864690a4fc9f842edd9d3d5c10b45a9b"},
+    {file = "boids_api-1.0.3.tar.gz", hash = "sha256:bb9893d22e6d3d0622f0b5110a461931b3e139ce54f71160941b1d9d8a879514"},
+]
+
+[[package]]
 name = "boids-utils"
 version = "1.1.2"
 description = "Utilities common to the Boids application"
@@ -1793,4 +1804,4 @@ multidict = ">=4.0"
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.10"
-content-hash = "9fa027288b4af6724f3e08b5252a2d34d514fa1abf00cfbc246a7f88132b912c"
+content-hash = "347d20e40c500fb5efafbea6d09decbbffd848b5b6c2067ec893aec10c51a9c8"
