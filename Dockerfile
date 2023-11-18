@@ -72,3 +72,4 @@ RUN usermod --append --groups docker python
 RUN /opt/poetry/bin/poetry install
 
 USER python
+RUN mkdir -p /home/python/.ssh
