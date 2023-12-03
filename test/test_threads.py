@@ -3,7 +3,7 @@ import logging
 import os.path
 import uuid
 import pytest
-import boidsapi.model
+import boids_api.boids
 import boids.k8s_events.kubectl
 import boids_utils
 import boids_utils.pubsub
@@ -13,9 +13,9 @@ LOGGER = logging.getLogger(__name__)
 def create_test_session_config(count=1, title='Test title', num_boids=10):
     results = []
     for i in range(count):
-        value = boidsapi.model.SessionConfigurationStatus(title=f'{title} {i}',
+        value = boids_api.boids.SessionConfigurationStatus(title=f'{title} {i}',
                                                           num_boids=num_boids,
-                                                          state= boidsapi.model.SessionState.PENDING,
+                                                          state= boids_api.boids.SessionState.PENDING,
                                                           uuid=boids_utils.mk_uuid(),
                                                           created=boids_utils.nowutc(stringify=True),
                                                           modified=boids_utils.nowutc(stringify=True))
@@ -27,7 +27,7 @@ def create_test_session_config(count=1, title='Test title', num_boids=10):
 async def test_session_pending():
     consumer = boids.k8s_events.SessionConfigurationStatusConsumer()
 
-    session: boidsapi.model.SessionConfigurationStatus = create_test_session_config()
+    session: boids_api.boids.SessionConfigurationStatus = create_test_session_config()
 
     message = boids_utils.pubsub.Message(topic='boids.sessions', value=session.to_dict())
 
@@ -45,7 +45,7 @@ async def test_session_pending():
         if not found_deployment:
             await asyncio.sleep(1)
 
-    session.state = boidsapi.model.SessionState.ARCHIVED
+    session.state = boids_api.boids.SessionState.ARCHIVED
 
     message = boids_utils.pubsub.Message(topic='boids.sessions', value=session.to_dict())
 
