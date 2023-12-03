@@ -23,7 +23,7 @@ nats-py = "^2.4.0"
 elasticsearch = "^8.10.1"
 colorlog = "^6.7.0"
 boids-api = "^1.0.3"
-boids-utils = "1.1.3"
+boids-utils = "1.1.5"
 
 [tool.poetry.group.dev.dependencies]
 commitizen = "^2.40.0"
