@@ -1,3 +1,9 @@
+## v1.3.0 (2023-12-23)
+
+### Feat
+
+- process downward-api labels/annotations (#7)
+
 ## v1.2.3 (2023-12-03)
 
 ### Fix
