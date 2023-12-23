@@ -4,7 +4,9 @@ import argparse
 import asyncio
 import logging
 import boids.k8s_events
+import boids_utils.asyncio
 import boids_utils.config
+import boids_utils.downward
 import boids_utils.logging
 import boids_utils.openapi
 import boids_utils.pubsub
@@ -22,7 +24,8 @@ CLI_STAKEHOLDERS = [
     boids_utils.logging,
     boids_utils.openapi,
     boids_utils.pubsub,
-    boids_utils.template
+    boids_utils.template,
+    boids_utils.downward
 ]
 
 if __name__ == '__main__':
@@ -39,4 +42,4 @@ if __name__ == '__main__':
     callback = boids.k8s_events.SessionConfigurationStatusConsumer()
     boids_utils.pubsub.add_topic_callback('boids.sessions', callback)
 
-    asyncio.get_event_loop().run_forever()
+    boids_utils.asyncio.run_forever()

@@ -24,6 +24,7 @@ elasticsearch = "^8.10.1"
 colorlog = "^6.7.0"
 boids-api = "^1.0.3"
 boids-utils = "1.1.5"
+kubernetes-downward-api = "^0.2.0"
 
 [tool.poetry.group.dev.dependencies]
 commitizen = "^2.40.0"
