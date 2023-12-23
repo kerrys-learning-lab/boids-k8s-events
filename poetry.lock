@@ -736,6 +736,16 @@ files = [
 referencing = ">=0.28.0"
 
 [[package]]
+name = "kubernetes-downward-api"
+version = "0.2.0"
+description = "Parser for Kubernetes Downward API Volumes"
+optional = false
+python-versions = "*"
+files = [
+    {file = "kubernetes-downward-api-0.2.0.tar.gz", hash = "sha256:34c123306c86e7a7dad4f1de66776a232e50b12149574e698f23e078fb8a07f8"},
+]
+
+[[package]]
 name = "markdown-it-py"
 version = "3.0.0"
 description = "Python port of markdown-it. Markdown parsing, done right!"
@@ -1810,4 +1820,4 @@ multidict = ">=4.0"
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.10"
-content-hash = "7391020f93b2fd16b65a37732e74cfef3d96ae7f4cde614aa18afb21187ae6ef"
+content-hash = "6b5cdf4bcc594cf616f1544c6b0656579feb249953d4e672a76edf0d41f28ae9"
